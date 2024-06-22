@@ -49,6 +49,7 @@ const Character = struct {
 
     // I need to use the '?' here to allow for a null value. But
     // I don't explain it until later. Please don't tell anyone.
+    // rush: struct memebers should be pointers if they are struct or []struct
     mentor: ?*Character = null,
 };
 
@@ -68,7 +69,7 @@ pub fn main() void {
 
     // FIX ME!
     // Please pass Glorp to printCharacter():
-    printCharacter(???);
+    printCharacter(&glorp);
 }
 
 // Note how this function's "c" parameter is a pointer to a Character struct.
